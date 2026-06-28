@@ -1,4 +1,4 @@
-import { useTasks } from '../context/TaskContext';
+  import { useTasks } from '../context/TaskContext';
 import { useEffect, useRef } from 'react';
 
 const statusOptions = ['all', 'todo', 'in-progress', 'completed'];
@@ -22,7 +22,7 @@ export default function FilterBar() {
     if (filters.sort) params.sort = filters.sort;
     if (filters.search) params.search = filters.search;
     loadTasks(params);
-  }, [filters]);
+  }, [filters, loadTasks]);
 
   const handleSearch = (e) => {
     const val = e.target.value;
