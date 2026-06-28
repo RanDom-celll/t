@@ -36,7 +36,7 @@ export default function TaskForm({ initial, onSubmit, onCancel, loading }) {
         dueDate: initial.dueDate ? initial.dueDate.split('T')[0] : '',
       });
     }
-  }, [initial]);
+  }, [initial, setValues]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
